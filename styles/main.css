@@ -1,0 +1,49 @@
+.container-main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.header-main {
+  color: var(--text-heading);
+  font: var(--headingMd);
+}
+
+.sobre-evento {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+  h2 {
+    color: var(--text-heading);
+    font: var(--headingSm);
+  }
+}
+
+.input-titulo {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+
+  input {
+    background-color: var(--input-base);
+    padding: 16px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 1rem;
+    border: 1px solid var(--input-stroke);
+  }
+
+  input::placeholder {
+    color: var(--input-placeholder);
+    font: var(--bodyMd);
+  }
+
+  p {
+    color: var(--text-body);
+    font: var(--bodySm);
+    margin-top: 2rem;
+  }
+}

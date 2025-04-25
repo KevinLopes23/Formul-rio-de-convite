@@ -1,0 +1,30 @@
+.banner-convite {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 728px;
+  padding: 2rem;
+
+  background-image: url(/assets/icons/bolo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  img {
+    width: 29px;
+    height: 30px;
+  }
+}
+
+.texto-banner {
+  h1 {
+    color: var(--pink);
+    font: var(--logo);
+  }
+
+  p {
+    color: var(--text-heading);
+    font: var(--bodyMd);
+  }
+
+  margin-top: 1rem;
+}
