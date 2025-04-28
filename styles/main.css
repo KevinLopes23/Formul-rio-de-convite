@@ -95,4 +95,42 @@
   }
 }
 
+.input-tipo-local {
+  display: flex;
+  p {
+    color: var(--text-body);
+    margin-bottom: 0.5rem;
+    font: var(--bodySm);
+  }
+}
+
+.input-tipo-local input[type="radio"] {
+  display: none; /* Aqui que esconde a bolinha! */
+}
+
+.input-tipo {
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.only-type {
+  display: flex;
+  gap: 1rem;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  align-items: center;
+
+  label {
+    color: var(--text-body);
+    font: var(--bodySm);
+  }
+
+  img {
+    margin-right: 0.5rem;
+    width: 16px;
+    height: 16px;
+  }
+}
 
