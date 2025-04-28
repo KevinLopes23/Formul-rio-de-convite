@@ -239,22 +239,105 @@
               <p>Nenhum arquivo selecionado</p>
             </div>
           </div>
-        </div>
-      </div>
+          </div>
+
+
+
+<div class="text-cadastro">
+  <img src="assets/icons/contact.svg" alt="Contato">
+  <p>Dados para contato</p>
+</div>
+
+
+<div class="input-nome">
+  <p>Nome</p>
+  <input type="text" placeholder="Digite seu nome" class="campo-obrigatorio" required />
+  <span class="mensagem-erro">Campo obrigatório !</span>
+</div>
+
+
+<div class="email-telefone">
+  <div class="input-email">
+    <p>Email</p>
+    <input type="email" placeholder="Digite seu email" class="campo-obrigatorio" required />
+  </div>
+  <div class="input-telefone">
+    <p>Telefone</p>
+    <input type="tel" placeholder="Digite seu telefone" class="campo-obrigatorio" required />
+  </div>
+</div>
+
+<hr>
+
+<div class="botoes-finais">
+  <div class="botao">
+    <button type="checkbox" class="checkbox-btn"></button>
+    <p>Li e concordo com os <span>Termos e Condições</span> e com a <span>Política de Privacidade</span></p>
+  </div>
+  <div class="botao">
+    <button type="checkbox" class="checkbox-btn"></button>
+    <p>Aceito receber atualizações e promoções por e-mail</p>
+  </div>
+  <div class="botao">
+    <button type="checkbox" class="checkbox-btn"></button>
+    <p>Aceito receber atualizações e promoções por SMS</p>
+  </div>
+</div>
+
+
+<div class="gerar-convite">
+  <img src="assets/icons/ticket.svg" alt="Icone de ticket">
+  <p>Gerar convite</p>
+  <input type="submit" id="gerar-convite">
+</div>
+
     </main>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleBtn = document.getElementById("tema-escuro");
-
-        toggleBtn.addEventListener("click", function () {
-          this.classList.toggle("active");
-
-          if (this.classList.contains("active")) {
-            document.body.classList.add("tema-escuro");
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('tema-escuro');
+        
+        toggleBtn.addEventListener('click', function() {
+          this.classList.toggle('active');
+          
+          if (this.classList.contains('active')) {
+            document.body.classList.add('tema-escuro');
           } else {
-            document.body.classList.remove("tema-escuro");
+            document.body.classList.remove('tema-escuro');
           }
+        });
+
+        // Validação para campos obrigatórios
+        const camposObrigatorios = document.querySelectorAll('.campo-obrigatorio');
+        
+        camposObrigatorios.forEach(campo => {
+          // Verifica ao perder o foco
+          campo.addEventListener('blur', function() {
+            validarCampo(this);
+          });
+          
+          // Verifica a cada tecla digitada
+          campo.addEventListener('input', function() {
+            validarCampo(this);
+          });
+        });
+        
+        function validarCampo(campo) {
+          // Se o campo estiver vazio
+          if (!campo.value.trim()) {
+            campo.classList.add('invalido');
+          } else {
+            campo.classList.remove('invalido');
+          }
+        }
+
+        // Comportamento para os botões de checkbox
+        const checkboxButtons = document.querySelectorAll('.checkbox-btn');
+        
+        checkboxButtons.forEach(btn => {
+          btn.addEventListener('click', function() {
+            this.classList.toggle('checked');
+          });
         });
       });
     </script>

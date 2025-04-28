@@ -1,13 +1,24 @@
+aside {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--shape-background);
+}
+
 .banner-convite {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 728px;
+  width: 100%;
+  max-width: 400px;
+  height: 90vh;
+  max-height: 728px;
   padding: 2rem;
 
   background-image: url(/assets/icons/bolo.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border-radius: 12px;
   img {
     width: 29px;
@@ -27,4 +38,15 @@
   }
 
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  aside {
+    padding: 1rem;
+  }
+
+  .banner-convite {
+    height: 50vh;
+    max-height: 400px;
+  }
 }

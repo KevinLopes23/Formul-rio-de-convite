@@ -7,7 +7,9 @@
 body {
   background-color: var(--shape-background);
   display: grid;
-  grid-template-columns: 1fr 2fr ;
+  grid-template-columns: 40% 60%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 :root {
@@ -63,4 +65,12 @@ body {
   --bodyMd: normal 16px var(--OpensSans);
   --bodySm: normal 14px var(--OpensSans);
   --bodyXs: normal 12px var(--OpensSans);
+}
+
+/* Adicionar media query para responsividade */
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
 }
