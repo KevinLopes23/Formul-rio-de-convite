@@ -154,3 +154,79 @@
     background-color: var(--input-base);
   }
 }
+
+.presencial:hover {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--shape-button);
+  transition: 0.2s;
+}
+
+.online:hover {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--shape-button);
+  transition: 0.2s;
+}
+
+.input-descricao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+
+  p {
+    color: var(--text-body);
+    font: var(--bodySm);
+    margin-bottom: 0.5rem;
+  }
+
+  textarea {
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+    height: 136px;
+    border: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+  }
+
+  textarea::placeholder {
+    color: var(--input-placeholder);
+    font: var(--bodyMd);
+  }
+}
+
+.text-personalizacao {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  p {
+    color: var(--text-body);
+    font: var(--headingSm);
+  }
+}
+
+.botoes-cores {
+  display: flex;
+  gap: 1rem;
+  button {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: none;
+  }
+
+  button:hover {
+    border: 2px solid var(--brand-light);
+    transition: 0.2s;
+  }
+}
+
+.personalizacao-botoes {
+  p {
+    color: var(--text-body);
+    font: var(--bodySm);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+}
