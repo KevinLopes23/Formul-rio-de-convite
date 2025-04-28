@@ -102,6 +102,8 @@
     margin-bottom: 0.5rem;
     font: var(--bodySm);
   }
+
+  gap: 1rem;
 }
 
 .input-tipo-local input[type="radio"] {
@@ -121,6 +123,7 @@
   background-color: var(--input-base);
   border: 1px solid var(--input-stroke);
   align-items: center;
+  height: 48px;
 
   label {
     color: var(--text-body);
@@ -134,3 +137,20 @@
   }
 }
 
+.input-local {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+
+  p {
+    color: var(--text-body);
+    font: var(--bodySm);
+  }
+
+  input {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+  }
+}
