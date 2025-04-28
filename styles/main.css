@@ -251,6 +251,11 @@
     margin-top: 0.5rem;
     text-align: center;
   }
+
+  &:hover {
+    border: 1px solid var(--brand-light);
+    transition: 0.2s;
+  }
 }
 
 .cards {
@@ -266,4 +271,123 @@
     color: var(--text-body);
     font: var(--bodySm);
   }
+}
+
+.estilo {
+  p {
+    color: var(--text-body);
+    font: var(--bodySm);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.button-check {
+  display: flex;
+  gap: 0.5rem;
+  line-height: 32px;
+
+  p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 32px;
+  }
+
+  button {
+    width: 64px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--input-stroke);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #ccc;
+    transition: 0.2s;
+  }
+
+  .toggle-btn.active {
+    background-color: var(--brand-light);
+  }
+
+  .toggle-circle {
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 0.3s;
+  }
+
+  .toggle-btn.active .toggle-circle {
+    left: 36px;
+  }
+}
+
+.input-arquivo {
+  display: flex;
+  width: fit-content;
+  margin-top: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--shape-button);
+
+  label {
+    color: var(--text-heading);
+    font: var(--bodySm);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  img {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    background-color: var(--input-stroke);
+    transition: 0.2s;
+  }
+}
+
+.estilo-capa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#file-upload {
+  display: none;
+}
+
+.foto-capa {
+  p {
+    color: var(--text-body);
+    font: var(--bodySm);
+  }
+}
+
+.foto-capa-texto {
+  margin-top: 1.5rem;
+}
+
+.input-full {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  
+  text-align: center;
 }

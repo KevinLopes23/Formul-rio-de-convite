@@ -214,7 +214,49 @@
             </div>
           </div>
         </div>
+
+        <div class="estilo-capa">
+          <div class="estilo">
+            <p>Estilo</p>
+            <div class="button-check">
+              <button id="tema-escuro" class="toggle-btn">
+                <span class="toggle-circle"></span>
+              </button>
+              <p>Escuro</p>
+            </div>
+          </div>
+
+          <div class="foto-capa">
+            <p class="foto-capa-texto">Foto de capa</p>
+            <div class="input-full">
+              <div class="input-arquivo">
+                <label for="file-upload">
+                  <img src="/assets/icons/upload.svg" alt="Icone de upload" />
+                  Selecionar
+                </label>
+                <input type="file" id="file-upload" />
+              </div>
+              <p>Nenhum arquivo selecionado</p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.getElementById("tema-escuro");
+
+        toggleBtn.addEventListener("click", function () {
+          this.classList.toggle("active");
+
+          if (this.classList.contains("active")) {
+            document.body.classList.add("tema-escuro");
+          } else {
+            document.body.classList.remove("tema-escuro");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
